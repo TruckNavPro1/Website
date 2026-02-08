@@ -80,14 +80,11 @@ personal/
 *.orig
 *~
 
-# Large media files (GitHub has 100MB limit)
-*.mp4
-*.mov
-*.avi
-*.MP4
-*.MOV
-demo-video.mp4
-videos/
+# Large media files - Now using Git LFS for these
+# *.mp4
+# *.mov
+# *.avi
+# videos/
 
 # Generated QR code script (keep the QR image, ignore the script)
 generate-qr-code.py
