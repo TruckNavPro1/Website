@@ -1520,6 +1520,139 @@ body {
   margin-top: 10px;
 }
 
+/* Legal and Support Pages Styles */
+.legal-section,
+.support-section {
+  padding: 120px 20px 60px;
+  background: var(--midnight);
+  color: var(--white);
+  min-height: 80vh;
+}
+
+.legal-section h1,
+.support-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--cyan-accent);
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: var(--gray-300);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.legal-content h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--cyan-accent);
+}
+
+.legal-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--gray-300);
+}
+
+.legal-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--gray-300);
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Support Page Specifics */
+.support-channels {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan-accent);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.support-card i {
+  font-size: 2.5rem;
+  color: var(--cyan-accent);
+  margin-bottom: 15px;
+}
+
+.support-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.support-card p {
+  color: var(--gray-300);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.support-link {
+  color: var(--cyan-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-preview {
+  margin-top: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-preview h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.faq-item h3 {
+  color: var(--cyan-accent);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  color: var(--gray-300);
+  font-size: 0.95rem;
+}
+
+/* Footer Links Update */
 .footer-links {
   display: flex;
   flex-direction: column;
