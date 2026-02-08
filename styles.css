@@ -1558,6 +1558,25 @@ body {
   pointer-events: none;
 }
 
+/* CRITICAL MOBILE FIXES */
+.phone-video-frame {
+  max-width: 90vw !important;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero-video-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.demo-video {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: cover;
+}
+
 /* Legal and Support Pages Styles */
 .legal-section,
 .support-section {
