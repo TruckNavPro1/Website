@@ -232,26 +232,29 @@
             <div class="screenshots-carousel">
                 <div class="screenshots-track" id="screenshotsTrack">
                     <div class="screenshot-item">
-                        <div class="screenshot-frame video-frame">
-                            <video autoplay muted loop playsinline>
+                        <div class="screenshot-frame video-frame" onclick="playVideo(this)">
+                            <video poster="images/mapview-poster.jpg" playsinline preload="none">
                                 <source src="videos/mapview.mp4" type="video/mp4">
                             </video>
+                            <div class="play-overlay"><i class="fas fa-play"></i></div>
                         </div>
                         <span class="screenshot-label">Map View</span>
                     </div>
                     <div class="screenshot-item">
-                        <div class="screenshot-frame video-frame">
-                            <video autoplay muted loop playsinline>
+                        <div class="screenshot-frame video-frame" onclick="playVideo(this)">
+                            <video poster="images/routeplanning-poster.jpg" playsinline preload="none">
                                 <source src="videos/routeplanning.mp4" type="video/mp4">
                             </video>
+                            <div class="play-overlay"><i class="fas fa-play"></i></div>
                         </div>
                         <span class="screenshot-label">Route Planning</span>
                     </div>
                     <div class="screenshot-item">
-                        <div class="screenshot-frame video-frame">
-                            <video autoplay muted loop playsinline>
+                        <div class="screenshot-frame video-frame" onclick="playVideo(this)">
+                            <video poster="images/navigation-poster.jpg" playsinline preload="none">
                                 <source src="videos/navigation.mp4" type="video/mp4">
                             </video>
+                            <div class="play-overlay"><i class="fas fa-play"></i></div>
                         </div>
                         <span class="screenshot-label">Navigation</span>
                     </div>
@@ -259,34 +262,17 @@
                         <div class="screenshot-frame">
                             <img src="images/Routing 1.PNG" alt="Routing Feature 1" loading="lazy">
                         </div>
-                        <span class="screenshot-label">Routing</span>
+                        <span class="screenshot-label">Routing Options</span>
                     </div>
                     <div class="screenshot-item">
                         <div class="screenshot-frame">
-                            <img src="images/routing 2.PNG" alt="Routing Feature 2" loading="lazy">
+                            <img src="images/Paywall.PNG" alt="Pricing" loading="lazy">
                         </div>
-                        <span class="screenshot-label">Routing</span>
-                    </div>
-                    <div class="screenshot-item">
-                        <div class="screenshot-frame">
-                            <img src="images/routing 3.PNG" alt="Routing Feature 3" loading="lazy">
-                        </div>
-                        <span class="screenshot-label">Routing</span>
-                    </div>
-                    <div class="screenshot-item">
-                        <div class="screenshot-frame">
-                            <img src="images/routing 4.PNG" alt="Routing Feature 4" loading="lazy">
-                        </div>
-                        <span class="screenshot-label">Routing</span>
+                        <span class="screenshot-label">Simple Pricing</span>
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">←</button>
-                    <div class="carousel-dots" id="carouselDots"></div>
-                    <button class="carousel-btn next" id="nextBtn" aria-label="Next">→</button>
                 </div>
-            </div>
-        </div>
     </section>
 
     <!-- Video Section -->
@@ -294,30 +280,31 @@
         <div class="container">
             <span class="section-badge">Watch Demo</span>
             <h2 class="section-title">See <span class="gradient-text">TruckNavPro</span> in Action</h2>
-            <p class="section-subtitle">Watch how TruckNavPro keeps you safe on every route.</p>
-
-            <div class="video-demo-container">
-                <div class="phone-video-frame">
-                    <div class="phone-video-notch"></div>
-                    <video id="demoVideo" class="demo-video" controls playsinline
-                        poster="https://placehold.co/390x844/0A1628/00D4FF?text=▶+Play+Demo">
-                        <source src="demo-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div class="phone-video-frame">
+                <div class="phone-video-notch"></div>
+                <div class="hero-video-container" onclick="playVideo(this)">
+                    <div class="video-wrapper glass-card">
+                        <video poster="images/demo-poster.jpg" playsinline preload="none" controls>
+                            <source src="demo-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="tiktok-link-section">
-                <p class="tiktok-text">Want more? Follow us on TikTok for daily tips and trucker content!</p>
-                <a href="https://www.tiktok.com/@trucknavpro1" target="_blank" rel="noopener"
-                    class="btn btn-secondary tiktok-follow-btn">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <path
-                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
-                    </svg>
-                    @trucknavpro1
-                </a>
-            </div>
+        <div class="tiktok-link-section">
+            <p class="tiktok-text">Want more? Follow us on TikTok for daily tips and trucker content!</p>
+            <a href="https://www.tiktok.com/@trucknavpro1" target="_blank" rel="noopener"
+                class="btn btn-secondary tiktok-follow-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                    <path
+                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                </svg>
+                @trucknavpro1
+            </a>
+        </div>
         </div>
     </section>
 
@@ -559,27 +546,32 @@
                 <div class="footer-social">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                        </svg>
-                        </a>
-                        <a href="https://www.facebook.com/trucknavpro" target="_blank" rel="noopener"
-                            aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://www.tiktok.com/@trucknavpro1" target="_blank" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"
+                                fill="currentColor">
                                 <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/trucknavpro" target="_blank" rel="noopener"
-                            aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://x.com/trucknavpro" target="_blank" aria-label="X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"
+                                fill="currentColor">
                                 <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM365.7 421.8h39.1L153.2 79.6H114L365.7 421.8z" />
                             </svg>
                         </a>
-                        <a href="https://www.youtube.com/@trucknavpro" target="_blank" rel="noopener"
-                            aria-label="YouTube">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://www.facebook.com/trucknavpro" target="_blank" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"
+                                fill="currentColor">
                                 <path
-                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/trucknavpro" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"
+                                fill="currentColor">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zm-47.8 195.5c-5.2 13-10.7 23.8-17 30.2-6.4 6.4-17.2 11.9-30.2 17-21.2 8.4-71.5 6.5-124 6.5s-102.8 1.9-124-6.5c-13-5.2-23.8-10.7-30.2-17-6.4-6.4-11.9-17.2-17-30.2-8.4-21.2-6.5-71.5-6.5 124s1.9 102.8 6.5-124c5.2-13 10.7-23.8 17-30.2 6.4-6.4 17.2-11.9 30.2-17 21.2-8.4 71.5-6.5 124-6.5s102.8-1.9 124 6.5c13 5.2 23.8 10.7 30.2 17 6.4 6.4 11.9 17.2 17 30.2 8.4 21.2 6.5 71.5 6.5 124s1.9 102.8-6.5 124z" />
                             </svg>
                         </a>
                     </div>

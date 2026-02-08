@@ -1520,6 +1520,44 @@ body {
   margin-top: 10px;
 }
 
+/* Video Play Overlay Styles */
+.video-frame,
+.hero-video-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 212, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.video-frame:hover .play-overlay,
+.hero-video-container:hover .play-overlay {
+  background: rgba(0, 212, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-playing .play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Legal and Support Pages Styles */
 .legal-section,
 .support-section {

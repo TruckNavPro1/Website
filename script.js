@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
-  
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
@@ -26,21 +26,21 @@ function initNavbar() {
       navbar.classList.remove('scrolled');
     }
   });
-  
+
   // Smooth scroll for nav links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         const navHeight = navbar.offsetHeight;
         const targetPosition = target.offsetTop - navHeight - 20;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-        
+
         // Close mobile menu if open
         const mobileMenu = document.getElementById('mobileMenu');
         mobileMenu.classList.remove('active');
@@ -55,7 +55,7 @@ function initNavbar() {
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  
+
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
     menuBtn.classList.toggle('active');
@@ -70,7 +70,7 @@ function initScrollAnimations() {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -79,21 +79,21 @@ function initScrollAnimations() {
       }
     });
   }, observerOptions);
-  
+
   // Observe all animatable elements
   const animateElements = document.querySelectorAll(
     '.section-badge, .section-title, .section-subtitle, ' +
     '.feature-card, .testimonial-card, .pricing-card, ' +
     '.problem-stat, .faq-item, .glass-card'
   );
-  
+
   animateElements.forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
     observer.observe(el);
   });
-  
+
   // Add CSS for animated state
   const style = document.createElement('style');
   style.textContent = `
@@ -113,13 +113,13 @@ function initCarousel() {
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const dotsContainer = document.getElementById('carouselDots');
-  
+
   if (!track) return;
-  
+
   const items = track.querySelectorAll('.screenshot-item');
   const itemCount = items.length;
   let currentIndex = 0;
-  
+
   // Create dots
   items.forEach((_, i) => {
     const dot = document.createElement('span');
@@ -128,15 +128,15 @@ function initCarousel() {
     dot.addEventListener('click', () => scrollToIndex(i));
     dotsContainer.appendChild(dot);
   });
-  
+
   const dots = dotsContainer.querySelectorAll('.dot');
-  
+
   function updateDots() {
     dots.forEach((dot, i) => {
       dot.classList.toggle('active', i === currentIndex);
     });
   }
-  
+
   function scrollToIndex(index) {
     currentIndex = Math.max(0, Math.min(index, itemCount - 1));
     const item = items[currentIndex];
@@ -144,15 +144,15 @@ function initCarousel() {
     track.scrollTo({ left: scrollLeft, behavior: 'smooth' });
     updateDots();
   }
-  
+
   prevBtn.addEventListener('click', () => {
     scrollToIndex(currentIndex - 1);
   });
-  
+
   nextBtn.addEventListener('click', () => {
     scrollToIndex(currentIndex + 1);
   });
-  
+
   // Update dots on manual scroll
   let scrollTimeout;
   track.addEventListener('scroll', () => {
@@ -175,19 +175,19 @@ function initCarousel() {
  */
 function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
-  
+
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
-    
+
     question.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-      
+
       // Close all others
       faqItems.forEach(other => {
         other.classList.remove('active');
         other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
       });
-      
+
       // Toggle current
       if (!isActive) {
         item.classList.add('active');
@@ -202,30 +202,30 @@ function initFAQ() {
  */
 function initEmailForm() {
   const form = document.getElementById('emailForm');
-  
+
   if (!form) return;
-  
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const input = form.querySelector('input[type="email"]');
     const email = input.value;
-    
+
     if (email) {
       // Show success message
       const button = form.querySelector('button');
       const originalText = button.textContent;
-      
+
       button.textContent = '✓ Request Sent!';
       button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-      
+
       // Reset after 3 seconds
       setTimeout(() => {
         button.textContent = originalText;
         button.style.background = '';
         input.value = '';
       }, 3000);
-      
+
       // In production, send to backend
       console.log('Fleet pricing request for:', email);
     }
@@ -237,23 +237,23 @@ function initEmailForm() {
  */
 function initParallax() {
   const orbs = document.querySelectorAll('.gradient-orb');
-  
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return;
   }
-  
+
   let ticking = false;
-  
+
   window.addEventListener('scroll', () => {
     if (!ticking) {
       requestAnimationFrame(() => {
         const scrollY = window.scrollY;
-        
+
         orbs.forEach((orb, index) => {
           const speed = 0.1 + (index * 0.05);
           orb.style.transform = `translateY(${scrollY * speed}px)`;
         });
-        
+
         ticking = false;
       });
       ticking = true;
@@ -286,12 +286,12 @@ function initTypingEffect() {
     'Never Hit a Low Bridge.',
     'Your Truck. Your Route.'
   ];
-  
+
   let currentTagline = 0;
   const element = document.querySelector('.hero-subtitle');
-  
+
   if (!element) return;
-  
+
   // Could add typing animation here if desired
 }
 
@@ -300,26 +300,26 @@ function initTypingEffect() {
  */
 function animateCounters() {
   const counters = document.querySelectorAll('.stat-number, .problem-number');
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const target = entry.target;
         const text = target.textContent;
         const match = text.match(/[\d.]+/);
-        
+
         if (match) {
           const endValue = parseFloat(match[0]);
           const suffix = text.replace(match[0], '');
           const duration = 2000;
           const startTime = performance.now();
-          
+
           function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const easeProgress = 1 - Math.pow(1 - progress, 3);
             const currentValue = endValue * easeProgress;
-            
+
             if (text.includes('.')) {
               target.textContent = currentValue.toFixed(1) + suffix;
             } else if (text.includes('K') || text.includes('B')) {
@@ -327,20 +327,20 @@ function animateCounters() {
             } else {
               target.textContent = Math.floor(currentValue) + suffix;
             }
-            
+
             if (progress < 1) {
               requestAnimationFrame(updateCounter);
             }
           }
-          
+
           requestAnimationFrame(updateCounter);
         }
-        
+
         observer.unobserve(target);
       }
     });
   }, { threshold: 0.5 });
-  
+
   counters.forEach(counter => observer.observe(counter));
 }
 
@@ -348,3 +348,26 @@ function animateCounters() {
 animateCounters();
 
 console.log('🚛 TruckNavPro landing page loaded successfully!');
+
+// Video Playback Logic
+window.playVideo = function (container) {
+  const video = container.querySelector('video');
+  const overlay = container.querySelector('.play-overlay');
+
+  if (video.paused) {
+    video.play().then(() => {
+      container.classList.add('video-playing');
+    }).catch(error => {
+      console.error("Video play failed:", error);
+    });
+  } else {
+    video.pause();
+    container.classList.remove('video-playing');
+  }
+
+  // Reset overlay when video ends
+  video.addEventListener('ended', () => {
+    container.classList.remove('video-playing');
+    video.currentTime = 0;
+  });
+};
