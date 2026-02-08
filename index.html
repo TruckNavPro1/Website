@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruckNavPro - Professional Truck Navigation | Never Hit a Low Bridge Again</title>
+    <meta name="description"
+        content="Navigate like a pro with TruckNavPro. Truck-specific routing, low bridge warnings, and turn-by-turn navigation built for professional drivers.">
+    <meta property="og:title" content="TruckNavPro - Professional Truck Navigation">
+    <meta property="og:description" content="Navigate like a pro. Arrive like a champion. Download TruckNavPro today.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🚛</span>
+                <span class="logo-text">TruckNav<span class="gradient-text">Pro</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#download" class="nav-cta">Download Free</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download" class="mobile-cta">Download Free</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">⭐</span>
+                <span>Professional Truck Navigation</span>
+            </div>
+            <h1 class="hero-title">
+                Navigate Like a <span class="gradient-text">Pro</span>.<br>
+                Arrive Like a <span class="gradient-text-alt">Champion</span>.
+            </h1>
+            <p class="hero-subtitle">
+                Professional-grade truck navigation with low bridge warnings, weight restrictions, and hazmat routing.
+                Built by truckers, for truckers.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://apps.apple.com/us/app/trucknavpro1/id6755080720" target="_blank" rel="noopener"
+                    class="btn btn-primary">
+                    <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                    Download on App Store
+                </a>
+                <a href="#video" class="btn btn-secondary">
+                    <span class="play-icon">▶</span>
+                    Watch Demo
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">🛡️</span>
+                    <span class="stat-label">Low Bridge Protection</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">🚚</span>
+                    <span class="stat-label">Truck-Specific Routes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">📱</span>
+                    <span class="stat-label">iOS App</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-device">
+            <div class="appstore-hero-frame">
+                <img src="images/appstore-placement.png" alt="TruckNavPro1 on the Apple App Store"
+                    class="appstore-hero-image">
+            </div>
+            <div class="floating-badge badge-1">
+                <span class="badge-icon">🛡️</span>
+                <span>Low Bridge Alert</span>
+            </div>
+            <div class="floating-badge badge-2">
+                <span class="badge-icon">📍</span>
+                <span>Truck Routes</span>
+            </div>
+            <div class="floating-badge badge-3">
+                <span class="badge-icon">⚡</span>
+                <span>Real-time Updates</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <div class="problem-content">
+                <span class="section-badge">The Problem</span>
+                <h2 class="section-title">Standard GPS Apps Aren't Built for Trucks</h2>
+                <div class="problem-stats">
+                    <div class="problem-stat glass-card">
+                        <span class="problem-number">🚫</span>
+                        <span class="problem-label">Low bridge warnings missing</span>
+                    </div>
+                    <div class="problem-stat glass-card">
+                        <span class="problem-number">⚖️</span>
+                        <span class="problem-label">Weight restrictions ignored</span>
+                    </div>
+                    <div class="problem-stat glass-card">
+                        <span class="problem-number">🚧</span>
+                        <span class="problem-label">Wrong routes suggested</span>
+                    </div>
+                </div>
+                <p class="problem-text">
+                    Standard GPS apps don't understand your truck. They send you down roads with low bridges, weight
+                    restrictions, and hazmat-prohibited zones. One wrong turn can cost you your license, your cargo, and
+                    your livelihood.
+                </p>
+            </div>
+            <div class="solution-transition">
+                <div class="transition-line"></div>
+                <span class="transition-text">There's a better way</span>
+                <div class="transition-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <span class="section-badge">Features</span>
+            <h2 class="section-title">Everything You Need to <span class="gradient-text">Navigate Safely</span></h2>
+            <p class="section-subtitle">Built specifically for professional truck drivers with features that keep you
+                safe, legal, and on time.</p>
+
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <span>🚛</span>
+                    </div>
+                    <h3 class="feature-title">Truck-Specific Routing</h3>
+                    <p class="feature-description">Routes calculated based on your truck's exact height, weight, and
+                        width. No more guessing if you'll fit.</p>
+                </div>
+
+                <div class="feature-card glass-card featured">
+                    <div class="feature-badge">Most Popular</div>
+                    <div class="feature-icon">
+                        <span>🌉</span>
+                    </div>
+                    <h3 class="feature-title">Low Bridge Warnings</h3>
+                    <p class="feature-description">Real-time alerts before you reach low clearances. Visual and audio
+                        warnings give you time to reroute.</p>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <span>📍</span>
+                    </div>
+                    <h3 class="feature-title">Multi-Stop Optimization</h3>
+                    <p class="feature-description">Deliver smarter, not harder. Optimize your route for multiple stops
+                        and save hours on the road.</p>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <span>🌧️</span>
+                    </div>
+                    <h3 class="feature-title">Live Traffic & Weather</h3>
+                    <p class="feature-description">See hazards before you reach them. Real-time traffic updates and
+                        weather conditions along your route.</p>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <span>🗣️</span>
+                    </div>
+                    <h3 class="feature-title">Turn-by-Turn Navigation</h3>
+                    <p class="feature-description">Clear voice guidance designed for truckers. Lane assistance and
+                        upcoming maneuver alerts.</p>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <span>☢️</span>
+                    </div>
+                    <h3 class="feature-title">Hazmat Routing</h3>
+                    <p class="feature-description">Stay compliant, stay safe. Routes that respect hazmat restrictions
+                        and tunnel limitations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="container">
+            <span class="section-badge">App Preview</span>
+            <h2 class="section-title">See <span class="gradient-text">TruckNavPro</span> in Action</h2>
+            <p class="section-subtitle">Explore the intuitive interface designed for drivers on the go.</p>
+
+            <div class="screenshots-carousel">
+                <div class="screenshots-track" id="screenshotsTrack">
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="videos/mapview.mov" type="video/quicktime">
+                                <source src="videos/mapview.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="screenshot-label">Map View</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="videos/routeplanning.mov" type="video/quicktime">
+                                <source src="videos/routeplanning.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="screenshot-label">Route Planning</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="videos/navigation.mov" type="video/quicktime">
+                                <source src="videos/navigation.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="screenshot-label">Navigation</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame">
+                            <img src="images/Routing 1.PNG" alt="Routing Feature 1" loading="lazy">
+                        </div>
+                        <span class="screenshot-label">Routing</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame">
+                            <img src="images/routing 2.PNG" alt="Routing Feature 2" loading="lazy">
+                        </div>
+                        <span class="screenshot-label">Routing</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame">
+                            <img src="images/routing 3.PNG" alt="Routing Feature 3" loading="lazy">
+                        </div>
+                        <span class="screenshot-label">Routing</span>
+                    </div>
+                    <div class="screenshot-item">
+                        <div class="screenshot-frame">
+                            <img src="images/routing 4.PNG" alt="Routing Feature 4" loading="lazy">
+                        </div>
+                        <span class="screenshot-label">Routing</span>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">←</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <span class="section-badge">Watch Demo</span>
+            <h2 class="section-title">See <span class="gradient-text">TruckNavPro</span> in Action</h2>
+            <p class="section-subtitle">Watch how TruckNavPro keeps you safe on every route.</p>
+
+            <div class="video-demo-container">
+                <div class="phone-video-frame">
+                    <div class="phone-video-notch"></div>
+                    <video id="demoVideo" class="demo-video" controls playsinline
+                        poster="https://placehold.co/390x844/0A1628/00D4FF?text=▶+Play+Demo">
+                        <source src="demo-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="tiktok-link-section">
+                <p class="tiktok-text">Want more? Follow us on TikTok for daily tips and trucker content!</p>
+                <a href="https://www.tiktok.com/@trucknavpro1" target="_blank" rel="noopener"
+                    class="btn btn-secondary tiktok-follow-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                    </svg>
+                    @trucknavpro1
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <span class="section-badge">Testimonials</span>
+            <h2 class="section-title">Trusted by <span class="gradient-text">Professional Drivers</span></h2>
+            <p class="section-subtitle">See what our community of truckers has to say.</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"This app saved me from a 12'6\" bridge last week. The alert came with
+                        enough time to safely exit. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <span class="author-name">James Mitchell</span>
+                            <span class="author-role">Owner-Operator, 15 years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finally, a GPS that understands I'm driving an 18-wheeler, not a Prius.
+                        The routing is spot-on every time."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Rodriguez</span>
+                            <span class="author-role">Company Driver, Midwest Routes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Deployed this across our fleet of 50 trucks. Zero bridge incidents
+                        since. Our insurance company loves us now."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <span class="author-name">Mike Kowalski</span>
+                            <span class="author-role">Fleet Manager, 50+ trucks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <span class="section-badge">Pricing</span>
+            <h2 class="section-title">Simple, <span class="gradient-text">Transparent</span> Pricing</h2>
+            <p class="section-subtitle">Start with a free trial. No credit card required.</p>
+
+            <div class="pricing-grid pricing-two-col">
+                <div class="pricing-card glass-card">
+                    <h3 class="pricing-tier">Free Trial</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$0</span>
+                        <span class="price-period">for 3 days</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Full app access</li>
+                        <li>✓ All navigation features</li>
+                        <li>✓ Low bridge warnings</li>
+                        <li>✓ Truck-specific routing</li>
+                        <li>✓ No credit card required</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/trucknavpro1/id6755080720" target="_blank" rel="noopener"
+                        class="btn btn-secondary">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card glass-card featured">
+                    <div class="pricing-badge">Recommended</div>
+                    <h3 class="pricing-tier">Monthly</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">$9.99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Free Trial</li>
+                        <li>✓ Unlimited routes</li>
+                        <li>✓ Real-time traffic updates</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Cancel anytime</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/trucknavpro1/id6755080720" target="_blank" rel="noopener"
+                        class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <!-- In-App Paywall Preview -->
+            <div class="paywall-preview">
+                <h3 class="paywall-title">See the In-App Subscription Screen</h3>
+                <p class="paywall-subtitle">Clear, transparent pricing shown in the app</p>
+                <div class="paywall-frame">
+                    <img src="images/Paywall.PNG" alt="TruckNavPro In-App Subscription Screen" class="paywall-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <span class="section-badge">FAQ</span>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+
+            <div class="faq-list">
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does truck-specific routing work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Enter your truck's exact dimensions (height, weight, width, length) once, and TruckNavPro
+                            automatically calculates routes that avoid restrictions. We use a comprehensive database of
+                            bridge heights, weight limits, and road restrictions updated regularly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What truck dimensions are supported?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support all commercial vehicle types from box trucks to 53' trailers. You can save
+                            multiple truck profiles if you drive different vehicles. Dimensions include height, weight
+                            (loaded/empty), width, length, and axle count.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is there a free trial?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Every new user gets a full 3-day free trial with complete access to all features. No
+                            credit card required to start. After the trial, continue with our monthly subscription at
+                            just $9.99/month.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How accurate are the bridge warnings?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our bridge clearance database is sourced from DOT records and community reports.
+                            If you find an error, you can report it directly in the app to help keep the data accurate.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Does it work without cell service?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>TruckNavPro requires an internet connection to provide real-time navigation, traffic updates,
+                            and bridge warnings. We recommend ensuring you have reliable cell coverage on your routes
+                            for the best experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section class="download-section" id="download">
+        <div class="download-bg">
+            <div class="gradient-orb orb-4"></div>
+            <div class="gradient-orb orb-5"></div>
+        </div>
+        <div class="container">
+            <h2 class="download-title">Ready to Navigate <span class="gradient-text">Like a Pro</span>?</h2>
+            <p class="download-subtitle">Try TruckNavPro free for 3 days. No credit card required.</p>
+
+            <div class="download-ctas">
+                <a href="https://apps.apple.com/us/app/trucknavpro1/id6755080720" class="app-store-btn" target="_blank"
+                    rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="apple-icon-large">
+                        <path
+                            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                    <div class="store-text">
+                        <span class="store-label">Download on the</span>
+                        <span class="store-name">App Store</span>
+                    </div>
+                </a>
+
+                <div class="qr-code">
+                    <img src="images/app-qr-code.png" alt="Scan QR Code to download TruckNavPro from App Store">
+                    <span class="qr-label">Scan to download</span>
+                </div>
+            </div>
+
+            <div class="email-capture glass-card">
+                <h3>Fleet Manager?</h3>
+                <p>Get pricing for team deployments.</p>
+                <form class="email-form" id="emailForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Get Fleet Pricing</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🚛</span>
+                    <span class="logo-text">TruckNav<span class="gradient-text">Pro</span></span>
+                    <p class="footer-tagline">Your Truck. Your Route. Your Rules.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@trucknavpro1" target="_blank" rel="noopener"
+                            aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/trucknavpro" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/trucknavpro" target="_blank" rel="noopener"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/trucknavpro" target="_blank" rel="noopener"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@trucknavpro" target="_blank" rel="noopener"
+                            aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruckNavPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
