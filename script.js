@@ -371,3 +371,22 @@ window.playVideo = function (container) {
     video.currentTime = 0;
   });
 };
+
+// Smart App Store Link (Deep Link)
+document.addEventListener('DOMContentLoaded', () => {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if (isIOS) {
+    const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+
+    appStoreLinks.forEach(link => {
+      const match = link.href.match(/id\d+/);
+      if (match) {
+        link.href = `itms-apps://itunes.apple.com/app/${match[0]}`;
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+      }
+    });
+    console.log("Updated App Store links for iOS deep linking.");
+  }
+});
